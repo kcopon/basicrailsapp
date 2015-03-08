@@ -48,4 +48,7 @@ end
  
  group :development do
    gem 'sqlite3'
+
+   gem "rails-erd"
+   # gem addition from assignment
  end
