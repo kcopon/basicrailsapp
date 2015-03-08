@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+  def index #views/welcome/index.html.erb 
   end
 
   def about

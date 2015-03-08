@@ -3,4 +3,8 @@
 
 
 <section>I am the content in a section element.</section>
-<img src="http://fc09.deviantart.net/fs71/f/2013/025/2/0/twitter_button__logo_v2_by_pixxiepaynee-d5sog0x.png" height="42" width="42"> <%= link_to "Follow me", "http://www.twitter.com/kris_copon", class: "social-btn" %>
+<%= link_to "twitter.com/kris_copon" do %>
+  <%= image_tag('logo.png', alt: "Home") %>
+  <% end %>
+
+<%= link_to "Follow me", "http://www.twitter.com/kris_copon", class: "social-btn" %>
