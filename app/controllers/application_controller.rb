@@ -9,4 +9,12 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
+
+  before_action :flash_attack, if: :devise_controller?
+ 
+  protected
+ 
+  def flash_attack
+    devise_parameter_sanitizer.for(:post) 
+  end
 end
