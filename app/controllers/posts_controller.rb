@@ -36,4 +36,14 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  before_action :flash_attack, if: :devise_controller?
+ 
+  protected
+ 
+  def flash_attack
+    devise_parameter_sanitizer.for(:post) 
+  end
+
+   skip_before_action :flash_attack, except: [:new, :create]
 end
