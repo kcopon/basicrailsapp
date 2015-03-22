@@ -45,5 +45,5 @@ class PostsController < ApplicationController
     devise_parameter_sanitizer.for(:post) 
   end
 
-   skip_before_action :flash_attack, except: [:new, :create]
+   skip_before_action :flash_attack, except: [:new, :index]
 end
