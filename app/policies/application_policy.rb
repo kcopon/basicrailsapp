@@ -15,7 +15,7 @@ class ApplicationPolicy
   end
 
   def create?
-    user.present?
+    false
   end
 
   def new?
@@ -23,7 +23,7 @@ class ApplicationPolicy
   end
 
   def update?
-    user.present? && (record.user == user || user.admin?)
+    false
   end
 
   def edit?
@@ -31,7 +31,7 @@ class ApplicationPolicy
   end
 
   def destroy?
-    update?
+    false
   end
 
   def scope
@@ -52,15 +52,3 @@ class ApplicationPolicy
   end
 end
 
-class PostPolicy
-  attr_reader :user, :post
-
-  def initialize(user, post)
-    @user = user
-    @post = post
-  end
-
-  def update?
-    user.admin? or not post.published?
-  end
-end
