@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
-      authorize @posts
+    Pundit.policy_scope!(user, record.class)
   end
 
   def show
