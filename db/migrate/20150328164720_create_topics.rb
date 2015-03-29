@@ -5,7 +5,7 @@ class CreateTopics < ActiveRecord::Migration
       t.boolean :public, default: true
       t.text :description
 
-      t.timestamps null: false
+      t.timestamps 
     end
   end
 end
