@@ -1,5 +1,9 @@
 Bloccit::Application.routes.draw do
 
+  get 'summary/create'
+
+  get 'summary/show'
+
   devise_for :users
   resources :topics do
     resources :posts, except: [:index]
