@@ -36,6 +36,8 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'redcarpet'
+
 gem 'figaro', '1.0'
 
 group :development, :test do
