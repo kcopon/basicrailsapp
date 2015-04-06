@@ -38,6 +38,13 @@ gem 'pundit'
 
 gem 'redcarpet'
 
+gem 'mini_magick'
+
+gem 'fog'
+
+gem "carrierwave"
+gem "cloudinary"
+
 gem 'figaro', '1.0'
 
 group :development, :test do
