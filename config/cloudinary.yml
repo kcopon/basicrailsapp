@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: howy4danb
+  api_key: '665122167882311'
+  api_secret: ulfGnDU6mGUPW5YaoKHXHLe-v-g
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: howy4danb
+  api_key: '665122167882311'
+  api_secret: ulfGnDU6mGUPW5YaoKHXHLe-v-g
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: howy4danb
+  api_key: '665122167882311'
+  api_secret: ulfGnDU6mGUPW5YaoKHXHLe-v-g
+  enhance_image_tag: true
+  static_image_support: false
