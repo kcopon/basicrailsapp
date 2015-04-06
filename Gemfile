@@ -45,6 +45,8 @@ gem 'fog'
 gem "carrierwave"
 gem "cloudinary"
 
+gem 'will_paginate', '~> 3.0.5'
+
 gem 'figaro', '1.0'
 
 group :development, :test do
