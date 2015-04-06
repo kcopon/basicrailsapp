@@ -19,3 +19,6 @@
 # Ignore application configuration
 /config/application.yml
 /config/cloudinary.yml
+
+# Carrierwave image
+public/uploads
