@@ -49,6 +49,10 @@ gem 'will_paginate', '~> 3.0.5'
 
 gem 'figaro', '1.0'
 
+group :development do
+  gem "better_errors"
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
