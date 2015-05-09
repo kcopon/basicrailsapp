@@ -50,7 +50,8 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'figaro', '1.0'
 
 group :development do
-  gem "better_errors"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
