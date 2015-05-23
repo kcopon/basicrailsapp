@@ -75,3 +75,7 @@ end
    gem 'rails-erd'
    gem 'pry-rails'
  end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
