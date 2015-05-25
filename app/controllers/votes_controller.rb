@@ -2,26 +2,14 @@ class VotesController < ApplicationController
   before_action :load_post_and_vote
 
   def up_vote
-
-    if @vote
-      @vote.update_attribute(:value, 1)
-    else
-      @vote = current_user.votes.create(value: 1, post: @post)
-    end
-
-    # http://apidoc.com/rails/ActionController/Base/redirect_to
+    update_vote!(1)
+    # http://apidock.com/rails/ActionController/Base/redirect_to
     redirect_to :back
   end
 
   def down_vote
-  
-    if @vote
-      @vote.update_attribute(:value, -1)
-    else
-      @vote = current_user.votes.create(value: -1, post: @post)
-    end
-
-    # http://apidoc.com/rails/ActionController/Base/redirect_to
+    update_vote!(-1)
+    # http://apidock.com/rails/ActionController/Base/redirect_to
     redirect_to :back
   end
 
@@ -39,7 +27,7 @@ class VotesController < ApplicationController
       @vote.update_attribute(:value, new_value)
     else
       @vote = current_user.votes.build(value: new_value, post: @post)
-      authorize @vote, :create
+      authorize @vote, :create?
       @vote.save
     end
   end
