@@ -16,4 +16,9 @@
    def user_params
      params.require(:user).permit(:name, :avatar)
    end
+
+  def update_vote!(new_value)
+    # Extract vote updating logic here.
+    # This method has access to @vote, because of the before_action
+  end
  end
