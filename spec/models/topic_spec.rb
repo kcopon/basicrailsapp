@@ -31,3 +31,4 @@ describe Topic do
     end
   end
 end
+
