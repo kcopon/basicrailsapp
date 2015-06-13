@@ -1,5 +1,5 @@
  class UsersController < ApplicationController
-   before_action :authenticate_user!
+   before_action :authenticate_user!, except: [:show]
  
    def update
      if current_user.update_attributes(user_params)
@@ -10,10 +10,16 @@
        redirect_to edit_user_registration_path
      end
    end
+
+  def show
+  end
+
+  private
  
-   private
- 
-   def user_params
-     params.require(:user).permit(:name, :avatar, :email_favorties)
-   end
+  def user_params
+    params.require(:user).permit(:name, :avatar, :email_favorties)
+  end
+end
+
+
 
