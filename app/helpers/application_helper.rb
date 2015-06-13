@@ -12,4 +12,14 @@ module ApplicationHelper
       content_tag :div, capture(&block), class: 'form-group'
     end
   end
+  def up_vote_link_classes(post)
+    if up_vote? 
+      content_tag :div, class: 'glyphicon-chevron-up'
+    end
+  end
+  def down_vote_link_classes(post)
+    if down_vote? 
+      content_tag :div, class: 'glyphicon-chevron-down'
+    end
+  end
 end
