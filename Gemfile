@@ -82,4 +82,7 @@ group :development, :test do
 
 gem 'newrelic_rpm'
 
+gem 'puma', group: :production
+gem 'thin', group: :development
+
 end
