@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
 
     @comment = current_user.comments.build( comment_params )
     @comment.post = @post
+    @new_comment = Comment.new
     
     authorize @comment
 
@@ -13,7 +14,6 @@ class CommentsController < ApplicationController
     else
       flash[:error] = "There was an error saving the comment. Please try again."
     end
-  end
 
   respond_to do |format|
     format.html
@@ -36,10 +36,10 @@ class CommentsController < ApplicationController
        format.js
     end
   end
-end
 
-private
+  private
 
-def comment_params
-  params.require(:comment).permit(:body)
+  def comment_params
+    params.require(:comment).permit(:body)
+  end
 end
