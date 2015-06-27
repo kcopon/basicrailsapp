@@ -15,9 +15,10 @@ class CommentsController < ApplicationController
       flash[:error] = "There was an error saving the comment. Please try again."
     end
 
-  respond_to do |format|
-    format.html
-    format.js
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def destroy
