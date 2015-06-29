@@ -9,8 +9,10 @@ require 'factory_girl_rails'
     confirmed_at Time.now
   end
 
-  factory :user_with_post_and_comment, parent: :user do
-    after(:build) { |user| #post true, #comment true
-      (user) }
+  factory :user_with_post_and_comment do
+    after(:build) { |user|
+    post = create(:post, user: user)
+    create(:comment, user: user, post: post) 
+    }
   end
 end
