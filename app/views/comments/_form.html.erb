@@ -10,6 +10,7 @@
      </div>
    <% end %>
    <%= form_group_tag(@post.errors[:body]) do %>
+   <p></p>
      <%= f.label :body %>
      <%= f.text_area :body, rows: 1, class: 'form-control', placeholder: "Enter comment" %>
    <% end %>
