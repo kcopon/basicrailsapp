@@ -1,4 +1,4 @@
-<% if @comment.saved? %>
+<% if @comment.save %>
   $<'#comment-' +<%= @comment.id %>.show();
 <% else %>
   $('#comment-' +<%= @comment.id %>).prepend("<div class='alert alert-danger'><%flash[:error] %></div>");

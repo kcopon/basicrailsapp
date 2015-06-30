@@ -25,8 +25,8 @@
     </div>
   </div>
 <%= render partial: 'favorites/favorite', locals: { post: @post } %>
+<%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
 <%= render partial: 'comments/comment', collection: @comments %>
 <% if policy(Comment.new).create? %>
-<%= render partial: 'comments/form', locals: { topic: @topic, post: @post } %>
   <% end %>
 </div>
